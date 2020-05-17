@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: flights-backend
+  description: Heathrow and Luton flight information API
+  version: 1.0.0
+servers:
+  - url: /api/v1
+tags:
+  - name: Flights
+    description: Flight information endpoints
+  - name: Specification
+    description: The swagger API specification
+paths:
+  /flights:
+    get:
+      tags:
+        - Flights
+      description: Fetch all flights from Heathrow and Luton airports
+      responses:
+        200:
+          description: Returns live flight data from Heathrow and Luton airports
+          content: {}
+
+  /spec:
+    get:
+      tags:
+        - Specification
+      responses:
+        200:
+          description: Return the API specification
+          content: {}
